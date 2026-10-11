@@ -110,6 +110,8 @@ The suite covers the three example consultations, all ten chemicals, pH and grav
 | [examples/](examples/) | Inputs for the three example consultations |
 | [tests/test_pollution.py](tests/test_pollution.py) | Automated checks against the CLIPS engine |
 
-## Authors
+## Contributors
 
-Joint coursework by **Αριστοτέλης Κασσελούρης** and **Μανώλης Αστραντίνης**, for the Knowledge Systems course.
+- **Αριστοτέλης Κασσελούρης**
+- **Μανώλης Αστραντίνης**
+for the Knowledge Systems course.
