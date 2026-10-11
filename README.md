@@ -106,7 +106,6 @@ The suite covers the three example consultations, all ten chemicals, pH and grav
 | [clips/pollution.clp](clips/pollution.clp) | Static knowledge and interactive CLIPS solver |
 | [ontology/](ontology/) | Original Frames project, with portable filenames and corrected data |
 | [docs/model.md](docs/model.md) | Model assumptions, class hierarchy, and search strategy |
-| [docs/ontology-report.pdf](docs/ontology-report.pdf) | Greek coursework report, without student identifiers |
 | [examples/](examples/) | Inputs for the three example consultations |
 | [tests/test_pollution.py](tests/test_pollution.py) | Automated checks against the CLIPS engine |
 
