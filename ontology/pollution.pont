@@ -1,0 +1,203 @@
+; Wed Jan 14 20:45:42 EET 2026
+; 
+;+ (version "3.5")
+;+ (build "Build 663")
+
+
+(defclass %3ACLIPS_TOP_LEVEL_SLOT_CLASS "Fake class to save top-level slot information"
+	(is-a USER)
+	(role abstract)
+	(single-slot formula
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot downstream
+		(type INSTANCE)
+;+		(allowed-classes SewerNode)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot spectroscopy
+		(type SYMBOL)
+		(allowed-values none carbon sulphur sodium metal)
+		(create-accessor read-write))
+	(single-slot colour
+		(type SYMBOL)
+		(allowed-values red white none)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot categoryPH
+		(type SYMBOL)
+		(allowed-values acid base oil)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot greekName
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot specificGravityHint
+		(type SYMBOL)
+		(allowed-values lighter_than_water heavier_than_water equal_to_water)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot connectedManhole
+		(type INSTANCE)
+;+		(allowed-classes Manhole)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot containsChemical
+		(type INSTANCE)
+;+		(allowed-classes Chemical)
+		(create-accessor read-write))
+	(single-slot strength
+		(type SYMBOL)
+		(allowed-values strong weak none)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot radioactive
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot solubility
+		(type SYMBOL)
+		(allowed-values soluble insoluble)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot englishName
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot stationName
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot smell
+		(type SYMBOL)
+		(allowed-values choking vinegar none)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot hazards
+		(type SYMBOL)
+		(allowed-values burns_skin asphyxiation corrosive explosive highly_toxic_PCBs)
+		(create-accessor read-write)))
+
+(defclass Chemical
+	(is-a USER)
+	(role abstract)
+	(single-slot formula
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot colour
+		(type SYMBOL)
+		(allowed-values red white none)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot englishName
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot categoryPH
+		(type SYMBOL)
+		(allowed-values acid base oil)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot strength
+		(type SYMBOL)
+		(allowed-values strong weak none)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot spectroscopy
+		(type SYMBOL)
+		(allowed-values none carbon sulphur sodium metal)
+		(create-accessor read-write))
+	(single-slot greekName
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot radioactive
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot specificGravityHint
+		(type SYMBOL)
+		(allowed-values lighter_than_water heavier_than_water equal_to_water)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot solubility
+		(type SYMBOL)
+		(allowed-values soluble insoluble)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot smell
+		(type SYMBOL)
+		(allowed-values choking vinegar none)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot hazards
+		(type SYMBOL)
+		(allowed-values burns_skin asphyxiation corrosive explosive highly_toxic_PCBs)
+		(create-accessor read-write)))
+
+(defclass Acid
+	(is-a Chemical)
+	(role abstract))
+
+(defclass StrongAcid
+	(is-a Acid)
+	(role concrete))
+
+(defclass WeakAcid
+	(is-a Acid)
+	(role concrete))
+
+(defclass Base
+	(is-a Chemical)
+	(role abstract))
+
+(defclass StrongBase
+	(is-a Base)
+	(role concrete))
+
+(defclass WeakBase
+	(is-a Base)
+	(role concrete))
+
+(defclass Oil
+	(is-a Chemical)
+	(role concrete))
+
+(defclass Store
+	(is-a USER)
+	(role concrete)
+	(single-slot connectedManhole
+		(type INSTANCE)
+;+		(allowed-classes Manhole)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot containsChemical
+		(type INSTANCE)
+;+		(allowed-classes Chemical)
+		(create-accessor read-write)))
+
+(defclass SewerNode
+	(is-a USER)
+	(role abstract))
+
+(defclass Manhole
+	(is-a SewerNode)
+	(role concrete)
+	(single-slot downstream
+		(type INSTANCE)
+;+		(allowed-classes SewerNode)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass MonitoringStation
+	(is-a SewerNode)
+	(role concrete)
+	(single-slot stationName
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))

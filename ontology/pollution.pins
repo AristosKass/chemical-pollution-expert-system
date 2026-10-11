@@ -1,0 +1,255 @@
+; Wed Jan 14 20:45:42 EET 2026
+; 
+;+ (version "3.5")
+;+ (build "Build 663")
+
+([acetic_acid] of  WeakAcid
+
+	(categoryPH acid)
+	(colour none)
+	(englishName "Acetic acid")
+	(formula "CH3COOH")
+	(greekName "Οξικό οξύ")
+	(smell vinegar)
+	(solubility soluble)
+	(specificGravityHint equal_to_water)
+	(spectroscopy none)
+	(strength weak))
+
+([aluminium_hydroxide] of  WeakBase
+
+	(categoryPH base)
+	(colour white)
+	(englishName "Aluminium hydroxide")
+	(formula "Al(OH)3")
+	(greekName "Υδροξείδιο του Αργιλίου")
+	(smell none)
+	(solubility soluble)
+	(specificGravityHint heavier_than_water)
+	(spectroscopy metal)
+	(strength weak))
+
+([carbonic_acid] of  WeakAcid
+
+	(categoryPH acid)
+	(colour none)
+	(englishName "Carbonic acid")
+	(formula "H2CO3")
+	(greekName "Ανθρακικό οξύ")
+	(smell none)
+	(solubility soluble)
+	(specificGravityHint equal_to_water)
+	(spectroscopy carbon)
+	(strength weak))
+
+([chromogen_23] of  WeakBase
+
+	(categoryPH base)
+	(colour red)
+	(englishName "Chromogen 23")
+	(formula "??")
+	(greekName "Χρωμογόνο 23")
+	(smell none)
+	(solubility soluble)
+	(specificGravityHint lighter_than_water)
+	(spectroscopy none)
+	(strength weak))
+
+([hydrochloric_acid] of  StrongAcid
+
+	(categoryPH acid)
+	(colour none)
+	(englishName "Hydrochloric acid")
+	(formula "HCl")
+	(greekName "Υδροχλωρικό οξύ")
+	(hazards burns_skin asphyxiation)
+	(smell choking)
+	(solubility soluble)
+	(specificGravityHint equal_to_water)
+	(spectroscopy none)
+	(strength strong))
+
+([manhole_1] of  Manhole
+
+	(downstream [manhole_9]))
+
+([manhole_10] of  Manhole
+
+	(downstream [manhole_12]))
+
+([manhole_11] of  Manhole
+
+	(downstream [manhole_13]))
+
+([manhole_12] of  Manhole
+
+	(downstream [monitoring_station]))
+
+([manhole_13] of  Manhole
+
+	(downstream [monitoring_station]))
+
+([manhole_2] of  Manhole
+
+	(downstream [manhole_9]))
+
+([manhole_3] of  Manhole
+
+	(downstream [manhole_9]))
+
+([manhole_4] of  Manhole
+
+	(downstream [manhole_10]))
+
+([manhole_5] of  Manhole
+
+	(downstream [manhole_10]))
+
+([manhole_6] of  Manhole
+
+	(downstream [manhole_11]))
+
+([manhole_7] of  Manhole
+
+	(downstream [manhole_11]))
+
+([manhole_8] of  Manhole
+
+	(downstream [manhole_13]))
+
+([manhole_9] of  Manhole
+
+	(downstream [manhole_12]))
+
+([monitoring_station] of  MonitoringStation
+)
+
+([petrol] of  Oil
+
+	(categoryPH oil)
+	(colour none)
+	(englishName "Petrol")
+	(formula "??")
+	(greekName "Βενζίνη")
+	(hazards explosive)
+	(smell none)
+	(solubility insoluble)
+	(specificGravityHint lighter_than_water)
+	(spectroscopy carbon)
+	(strength none))
+
+([rubidium_hydroxide] of  WeakBase
+
+	(categoryPH base)
+	(colour none)
+	(englishName "Rubidium hydroxide")
+	(formula "RbOH")
+	(greekName "Υδροξείδιο του Ρουβιδίου")
+	(radioactive TRUE)
+	(smell none)
+	(solubility soluble)
+	(specificGravityHint heavier_than_water)
+	(spectroscopy metal)
+	(strength weak))
+
+([sodium_hydroxide] of  StrongBase
+
+	(categoryPH base)
+	(colour none)
+	(englishName "Sodium hydroxide")
+	(formula "NaOH")
+	(greekName "Υδροξείδιο του Νατρίου")
+	(hazards corrosive)
+	(smell none)
+	(solubility soluble)
+	(specificGravityHint equal_to_water)
+	(spectroscopy sodium)
+	(strength strong))
+
+([store_1] of  Store
+
+	(connectedManhole [manhole_1])
+	(containsChemical
+		[sulphuric_acid]
+		[petrol]))
+
+([store_2] of  Store
+
+	(connectedManhole [manhole_2])
+	(containsChemical
+		[hydrochloric_acid]
+		[acetic_acid]))
+
+([store_3] of  Store
+
+	(connectedManhole [manhole_3])
+	(containsChemical
+		[rubidium_hydroxide]
+		[transformer_oil]))
+
+([store_4] of  Store
+
+	(connectedManhole [manhole_4])
+	(containsChemical
+		[carbonic_acid]
+		[acetic_acid]
+		[petrol]))
+
+([store_5] of  Store
+
+	(connectedManhole [manhole_5])
+	(containsChemical
+		[chromogen_23]
+		[sulphuric_acid]
+		[petrol]))
+
+([store_6] of  Store
+
+	(connectedManhole [manhole_6])
+	(containsChemical
+		[aluminium_hydroxide]
+		[transformer_oil]
+		[carbonic_acid]))
+
+([store_7] of  Store
+
+	(connectedManhole [manhole_7])
+	(containsChemical
+		[hydrochloric_acid]
+		[sulphuric_acid]))
+
+([store_8] of  Store
+
+	(connectedManhole [manhole_8])
+	(containsChemical
+		[acetic_acid]
+		[carbonic_acid]
+		[sodium_hydroxide]))
+
+([sulphuric_acid] of  StrongAcid
+
+	(categoryPH acid)
+	(colour none)
+	(englishName "Sulphuric acid")
+	(formula "H2SO4")
+	(greekName "Θειικό οξύ")
+	(hazards burns_skin)
+	(smell none)
+	(solubility soluble)
+	(specificGravityHint equal_to_water)
+	(spectroscopy sulphur)
+	(strength strong))
+
+([transformer_oil] of  Oil
+
+	(categoryPH oil)
+	(colour none)
+	(englishName "Transformer oil")
+	(formula "??")
+	(greekName "Πετρέλαιο μετασχηματιστή")
+	(hazards highly_toxic_PCBs)
+	(smell none)
+	(solubility insoluble)
+	(specificGravityHint equal_to_water)
+	(spectroscopy carbon)
+	(strength none))

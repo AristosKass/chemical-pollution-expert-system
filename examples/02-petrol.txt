@@ -1,0 +1,5 @@
+solubility specific_gravity
+insoluble
+0.95
+yes
+no
