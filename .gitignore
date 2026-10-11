@@ -1,0 +1,24 @@
+# Python test environment and generated caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Protégé backups and temporary files; keep .pprj, .pont and .pins
+*.pprj.bak
+*.pont.bak
+*.pins.bak
+*.bak
+*.tmp
+*.log
+*~
+
+# Editor / operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
