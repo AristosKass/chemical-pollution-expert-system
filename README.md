@@ -99,8 +99,6 @@ python -m unittest discover -s tests -v
 
 The suite covers the three example consultations, all ten chemicals, pH and gravity boundaries, spectroscopy, input validation, incomplete input, invalid graphs, ambiguous sources, and additional stores with arbitrary instance names. It also checks that the Protégé instances match the embedded CLIPS instances.
 
-Validation for this public package: **23 tests passed**, using Python 3.12.14 and clipspy 1.0.6 (bundled CLIPS 6.4.2). Protégé file references and exported model consistency were checked; the Protégé graphical editor was not run during this validation.
-
 ## Project files
 
 | Path | Purpose |
