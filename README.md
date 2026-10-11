@@ -108,7 +108,6 @@ Validation for this public package: **23 tests passed**, using Python 3.12.14 an
 | [clips/pollution.clp](clips/pollution.clp) | Static knowledge and interactive CLIPS solver |
 | [ontology/](ontology/) | Original Frames project, with portable filenames and corrected data |
 | [docs/model.md](docs/model.md) | Model assumptions, class hierarchy, and search strategy |
-| [docs/changes.md](docs/changes.md) | Changes made while preparing the public repository |
 | [docs/ontology-report.pdf](docs/ontology-report.pdf) | Greek coursework report, without student identifiers |
 | [examples/](examples/) | Inputs for the three example consultations |
 | [tests/test_pollution.py](tests/test_pollution.py) | Automated checks against the CLIPS engine |
