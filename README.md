@@ -112,7 +112,7 @@ The suite covers the three example consultations, all ten chemicals, pH and grav
 
 ## Contributors
 
-- **Αριστοτέλης Κασσελούρης**
-- **Μανώλης Αστραντίνης**
+- Αριστοτέλης Κασσελούρης
+- Μανώλης Αστραντίνης
 
 for the "Knowledge Systems" course.
