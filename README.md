@@ -115,6 +115,6 @@ Validation for this public package: **23 tests passed**, using Python 3.12.14 an
 
 ## Authors
 
-Joint coursework by **Αριστοτέλης Κασσελούρης** and **Μανώλης Αστραντίνης**, for the Knowledge Systems course, academic year 2025–2026.
+Joint coursework by **Αριστοτέλης Κασσελούρης** and **Μανώλης Αστραντίνης**, for the Knowledge Systems course.
 
 This public package preserves the original ontology and solver structure with the documented corrections and checks in [docs/changes.md](docs/changes.md).
